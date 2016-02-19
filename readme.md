@@ -31,3 +31,4 @@ echo $rp;
 ```
 
 (*) https://tr.wikipedia.org/wiki/Pangram
+(*) http://www.afilifilintalar.com/pangramlar
