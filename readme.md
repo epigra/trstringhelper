@@ -1,5 +1,11 @@
 # PHP Türkçe Karakter Destekli String Fonksiyonları (toupper,tolower,ucfirst,ucwords,capitalizefirst) Kütüphanesi
 
+## Yükleme
+composer üzerinden:
+```
+composer require epigra/trstringhelper
+````
+demeniz yeterli olacaktır.
 
 ## Kullanım
 
@@ -30,5 +36,5 @@ $rp = TRStringHelper::pangram();
 echo $rp;
 ```
 
-(*) https://tr.wikipedia.org/wiki/Pangram
-(*) http://www.afilifilintalar.com/pangramlar
+https://tr.wikipedia.org/wiki/Pangram
+http://www.afilifilintalar.com/pangramlar
