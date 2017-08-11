@@ -9,22 +9,22 @@ class TrStringTest extends TestCase
 {
     public function testToLower()
     {
-        return $this->assertEquals('deneme. çğışöiü', $this->getInstance()->toLower()->result());
+        return $this->assertEquals('deneme. çğışöiü ılgazım imgecim', $this->getInstance()->toLower()->result());
     }
 
     public function testToUpper()
     {
-        return $this->assertEquals('DENEME. ÇĞIŞÖİÜ', $this->getInstance()->toUpper()->result());
+        return $this->assertEquals('DENEME. ÇĞIŞÖİÜ ILGAZIM İMGECİM', $this->getInstance()->toUpper()->result());
     }
 
     public function testUcFirst()
     {
-        return $this->assertEquals('Deneme. çğışöiü', $this->getInstance()->ucFirst()->result());
+        return $this->assertEquals('Deneme. çğışöiü ılgazım imgecim', $this->getInstance()->ucFirst()->result());
     }
 
     public function testUcWords()
     {
-        return $this->assertEquals('Deneme. Çğışöiü', $this->getInstance()->ucWords()->result());
+        return $this->assertEquals('Deneme. Çğışöiü Ilgazım İmgecim', $this->getInstance()->ucWords()->result());
     }
 
     public function testString()
@@ -39,6 +39,6 @@ class TrStringTest extends TestCase
 
     private function getInstance()
     {
-        return new TRStringHelper('dEneMe. çĞıŞöİÜ');
+        return new TRStringHelper('dEneMe. çĞıŞöİÜ ILGAZIM İMGECİM');
     }
 }
