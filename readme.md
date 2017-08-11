@@ -1,11 +1,10 @@
-# PHP Türkçe Karakter Destekli String Fonksiyonları (toupper,tolower,ucfirst,ucwords,capitalizefirst) Kütüphanesi
+# PHP Türkçe Karakter Destekli String Fonksiyonları (toupper,tolower,ucfirst,ucwords) Kütüphanesi
 
 ## Yükleme
-composer üzerinden:
+Composer ile yükleyebilirsiniz:
 ```
 composer require epigra/trstringhelper
 ````
-demeniz yeterli olacaktır.
 
 ## Kullanım
 
@@ -13,14 +12,17 @@ demeniz yeterli olacaktır.
 ```php
 use Epigra\TRStringHelper;
 
-$x = new TRStringHelper("dEneMe. çĞıŞöİÜ");
-echo $x->toLower()->result(); // toUpper,ucFirst, ucWords, capitalizeFirst
+$w = new TRStringHelper("dEneMe. çĞıŞöİÜ");
+echo $w->toLower()->result(); // deneme. çğışöiü
 
-// veya
+$x = (new TRStringHelper())->withString("dEneMe. çĞıŞöİÜ")->toUpper()->result();
+echo $x; // DENEME. ÇĞIŞÖİÜ
 
-$y = (new TRStringHelper())->withString("dEneMe. çĞıŞöİÜ")->toLower()->capitalizeFirst()->result();
-echo $y;
+$y = (new TRStringHelper("dEneMe. çĞıŞöİÜ"))->ucFirst()->result();
+echo $y; // Deneme. çğışöiü
 
+$z = (new TRStringHelper())->withString("dEneMe. çĞıŞöİÜ")->ucWords()->result(); 
+echo $z; // Deneme. Çğışöiü
 ```
 
 ## With Pangram (*)
